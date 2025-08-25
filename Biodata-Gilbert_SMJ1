@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Diri - Gilbert Emmanuel Simanjuntak</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* === Variabel Sistem Desain & Reset Dasar === */
+        :root {
+            --primary-color: #a2d2ff; /* Biru lembut sebagai warna utama */
+            --background-color: #f8f9fa; /* Putih pudar untuk latar belakang */
+            --text-color: #343a40; /* Abu-abu gelap untuk teks agar mudah dibaca */
+            --card-background: #ffffff; /* Putih bersih untuk kartu */
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+            --spacing-medium: 16px;
+            --spacing-large: 32px;
+        }
+
+        /* Reset dasar untuk menghilangkan margin & padding default browser */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* === Gaya Global === */
+        body {
+            font-family: 'Poppins', sans-serif; /* Menggunakan Poppins sebagai font utama */
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            
+            /* Menggunakan Flexbox untuk memusatkan kartu biodata di tengah halaman */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: var(--spacing-medium);
+        }
+
+        /* === Struktur Utama & Kartu Biodata === */
+        main {
+            width: 100%;
+        }
+
+       .biodata-card {
+            background-color: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 24px var(--shadow-color);
+            padding: var(--spacing-large);
+            width: 100%;
+            max-width: 600px; /* Batas lebar maksimum kartu di layar besar */
+            text-align: center;
+        }
+
+        /* === Tipografi & Judul === */
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-medium);
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            margin-bottom: var(--spacing-large);
+            font-weight: 600;
+            font-size: 1.75rem;
+        }
+
+        h3 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 8px;
+            margin-top: var(--spacing-large);
+            margin-bottom: var(--spacing-medium);
+            font-weight: 600;
+            text-align: left;
+        }
+
+        /* === Konten Biodata === */
+       .biodata-section {
+            text-align: left;
+        }
+
+       .biodata-section p {
+            margin-bottom: 12px;
+        }
+
+       .biodata-section ul {
+            list-style: none; /* Menghapus bulatan default */
+            padding-left: 0;
+        }
+
+       .biodata-section li {
+            background-color: var(--background-color);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        /* === Tombol Interaktif & Pesan === */
+       .action-button {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            border: none;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: var(--spacing-large);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+       .action-button:hover {
+            transform: translateY(-2px); /* Efek mengangkat saat di-hover */
+            box-shadow: 0 12px 28px rgba(162, 210, 255, 0.5);
+        }
+
+        #pesan-container {
+            margin-top: var(--spacing-large);
+            padding: var(--spacing-medium);
+            background-color: #e9f5ff; /* Latar belakang yang lebih terang untuk pesan */
+            border-left: 5px solid var(--primary-color);
+            border-radius: 8px;
+            text-align: left;
+            font-weight: 600;
+            display: none; /* Awalnya disembunyikan */
+        }
+
+        /* === Media Query untuk Desain Responsif === */
+        /* Gaya ini hanya berlaku jika lebar layar 768px atau lebih */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+           .biodata-card {
+                padding: 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <article class="biodata-card">
+            
+            <header>
+                <h1>Biodata Diri</h1>
+                <h2>Gilbert Emmanuel Simanjuntak</h2>
+            </header>
+
+            <section class="biodata-section" id="informasi-pribadi">
+                <h3>Informasi Pribadi</h3>
+                <p><strong>Tempat, Tanggal Lahir:</strong> Sibolga, 01 April 2005</p>
+                <p><strong>Alamat:</strong> Jalan Mawar no. 37, Kecamatan Sibolga Utara, Kelurahan Sibolga Ilir</p>
+            </section>
+
+            <section class="biodata-section" id="pendidikan">
+                <h3>Riwayat Pendidikan</h3>
+                <ul>
+                    <li>TK Maria Mutiara Kota Sibolga</li>
+                    <li>SD RK 3 & 4 Katholik Kota Sibolga</li>
+                    <li>SMP Negeri 2 Sibolga</li>
+                    <li>SMA Negeri 1 Sibolga</li>
+                </ul>
+            </section>
+
+            <section class="biodata-section" id="hobi">
+                <h3>Hobi</h3>
+                <ul>
+                    <li>Berolahraga lari</li>
+                    <li>Bermain bola basket</li>
+                </ul>
+            </section>
+            
+            <button id="pesan-btn" class="action-button">Tampilkan Pesan</button>
+
+            <div id="pesan-container"></div>
+
+        </article>
+    </main>
+
+    <script>
+        // Menunggu hingga seluruh konten halaman (DOM) dimuat sepenuhnya
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Langkah 1: Memilih elemen-elemen yang diperlukan dari HTML
+            const showMessageButton = document.querySelector('#pesan-btn');
+            const messageContainer = document.querySelector('#pesan-container');
+
+            // Langkah 2: Menambahkan 'event listener' pada tombol.
+            // Fungsi di dalamnya akan dijalankan setiap kali tombol diklik.
+            showMessageButton.addEventListener('click', () => {
+                
+                // Langkah 3: Memanipulasi DOM saat tombol diklik
+                // Mengisi konten teks dari wadah pesan
+                messageContainer.textContent = 'Halo, saya Gilbert Emmanuel Simanjuntak, selamat datang di website saya!';
+                
+                // Mengubah gaya CSS untuk membuat wadah pesan terlihat
+                messageContainer.style.display = 'block';
+            });
+        });
+    </script>
+
+</body>
+</html>
